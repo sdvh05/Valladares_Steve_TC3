@@ -1,0 +1,110 @@
+package Class;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author Hp
+ */
+public class Valladares_Steve_TC3 {
+    public static void main(String[] args) {
+        Scanner lea =new Scanner(System.in);
+        double Area=0,AreaMax=0;
+        int Base=0, Altura=0,NumTriangulo=0;
+        
+        
+        System.out.println("AREA de Triangulos");
+        for (int i = 1; i <= 8; i++) {
+           
+        while(true){
+            try{
+            System.out.println("Ingrese la Base del Triangulo #"+i);
+            Base=lea.nextInt();
+            if(Base>0){
+                break;
+            }else if(Base<=0)
+                    System.out.println("Ingrese un Numero Positivo mayor a 0");
+                    Base=lea.nextInt();
+            }catch(InputMismatchException e){
+                lea.nextLine();
+                System.out.println("Error, Ingrese un Numero Entero");
+            }
+            }
+            
+        while(true){
+            try{
+            System.out.println("Ingrese la Altura del Triangulo #"+i);
+            Altura=lea.nextInt();
+            if(Altura>0){
+                break;
+            }else if(Altura<=0)
+                    System.out.println("Ingrese un Numero Positivo mayor a 0");
+                    Altura=lea.nextInt();
+            }catch(InputMismatchException e){
+                lea.nextLine();
+                System.out.println("Error, Ingrese un Numero Entero");
+            }
+            }
+            
+            Area=0.5*Base*Altura;
+            System.out.println("Area #"+i+" = "+Area);
+
+            if(Area>AreaMax){
+                AreaMax=Area;
+                NumTriangulo=i;
+            }
+        }
+        
+        System.out.println("");
+        System.out.println("-----------------");
+        System.out.println("**AREA MAYOR**");
+        System.out.println("Area: "+AreaMax);
+        System.out.println("Triangulo: "+NumTriangulo);
+        System.out.println("-----------------");
+        System.out.println("");
+        
+        
+        System.out.println("MCM & MCD");
+        System.out.println("Maximo Comun Divisor y Minimo Comun Multiplo");
+        System.out.println("");
+        int Num1=0, Num2=0;
+        int MCD=0,MCM=0;
+        
+        while(true){
+        System.out.println("Ingresa el Numero 1");
+        Num1=lea.nextInt();
+        if(Num1>0){
+            break;
+        }else{
+            System.out.println("Ingrese Un Numero positivo mayor a 1");
+            Num1=lea.nextInt();
+        }
+        }
+        
+        while(true){
+        System.out.println("Ingresa el Numero 2");
+        Num2=lea.nextInt();
+        if(Num1>0){
+            break;
+        }else{
+            System.out.println("Ingrese Un Numero positivo mayor a 1");
+            Num1=lea.nextInt();
+        }
+        }
+        //Calcular MCM Y MCD
+        
+        
+         System.out.println("El MCD de " + Num1 + " y " + Num2 + " es: " + MCD);
+        System.out.println("El MCM de " + Num1 + " y " + Num2 + " es: " + MCM);
+        
+        
+        
+        System.out.println("");
+        System.out.println("Numero Perfecto");
+        boolean EsPerfecto=true;
+        
+    }
+    
+}
